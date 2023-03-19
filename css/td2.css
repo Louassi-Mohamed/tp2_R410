@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.red{
+	background-color: red;
+}
+
+
+.blue{
+	background-color: blue;
+}
+
+.surligner{
+	background-color: yellow;
+}

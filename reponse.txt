@@ -1,0 +1,20 @@
+Comment avez-vous ajouté l'écouteur d'évènement et sur quel objet ?
+    je l ai ajouté sur l'élément le plus de ma page c'est à dire ma balise body directement avec un onclick="select()"
+    <body onclick="select();">
+
+
+Que se passe-t-il si vous utilisez currentTarget en lieu et place de target ?
+    Ca ne marchera que sur l'élément auquel l'écouteur d'événements a été attaché,  tandis que target renvoie l'élément réel qui a déclenché l'événement.
+
+Comment avez-vous ajouté l’élément ?
+    a l aide de ma fonction addDivToBody qui va me rajouter la div insert-div
+    puis je verifie si newElement existe si c'est le cas je le mets a nul sinon je recupere les valeur de "#insert-type" et de "#insert-text" a l'aide d'un querySelector
+    afin de creer un element avec createElement et de l inserer avec insertBefore
+
+Comment avez-vous fait pour que la fonction select2() ignore les évèments de la <div> donnée ci-dessus ?
+    j ai exclu le cas 
+    const isClickable = !event.target.closest('#insert-div');
+	if (selectedElement !== event.target && isClickable) {
+		event.target.classList.add('blue');
+		selectedElement = event.target;
+	} 
